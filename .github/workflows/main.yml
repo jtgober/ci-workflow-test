@@ -1,0 +1,8 @@
+name: Example workflow
+on: push
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print webhook payload
+        run: echo '${{ toJson(github.event) }}'
